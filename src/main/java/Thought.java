@@ -1,2 +1,14 @@
-package PACKAGE_NAME;public class Thought {
+
+public class Thought {
+
+    private String content;
+
+    public Thought(final String content) {
+        this.content = content;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
 }
