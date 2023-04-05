@@ -1,3 +1,7 @@
+package ch1;
+
+import ch1.Action;
+import ch1.Human;
 import java.util.List;
 
 public class Main {
