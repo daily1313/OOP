@@ -1,8 +1,5 @@
 package ch1;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Thought {
 
     public String think;
@@ -22,6 +19,4 @@ public class Thought {
     public void processThought() {
         System.out.println("오늘 계획 " + this.think + "를 세웠습니다. ");
     }
-
-
 }

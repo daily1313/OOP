@@ -39,7 +39,6 @@ public class Human {
         this.satisfaction += 10;
     }
 
-
     public String getName() { return name; }
 
     public int getEnergy() {
@@ -53,7 +52,6 @@ public class Human {
     public int getSatisfaction() {
         return this.satisfaction;
     }
-
 
     public void completeMission() {
         this.actions.clear();

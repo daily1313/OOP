@@ -20,9 +20,7 @@ public class Main {
 
         List<Thought> thoughts = List.of(thought1, thought2, thought3, thought4);
         List<Action> actions = List.of(action1, action2, action3, action4);
-
         Human human = new Human("승범");
-
         System.out.println(human.getName() + "의 생각과 행동");
         for (Thought thought : thoughts) {
             human.validateStress(human.getStress());
