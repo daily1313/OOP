@@ -1,7 +1,7 @@
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
+
     public static void main(String[] args) {
 
         Thought thought1 = new Thought("Java Study");
@@ -9,30 +9,30 @@ public class Main {
         Thought thought3 = new Thought("Computer Structure");
         Thought thought4 = new Thought("턱걸이");
 
-        Action action1 = new Action("공부", "Java Study");
-        Action action2 = new Action("공부", "capstone");
-        Action action3 = new Action("공부", "Computer Structure");
-        Action action4 = new Action("운동", "턱걸이");
+        Action action1 = new Action("공부", thought1.getThink());
+        Action action2 = new Action("공부", thought2.getThink());
+        Action action3 = new Action("공부", thought3.getThink());
+        Action action4 = new Action("운동", thought4.getThink());
 
         List<Thought> thoughts = List.of(thought1, thought2, thought3, thought4);
         List<Action> actions = List.of(action1, action2, action3, action4);
 
-        Human human = new Human();
+        Human human = new Human("승범");
 
+        System.out.println(human.getName() + "의 생각과 행동");
         for (Thought thought : thoughts) {
-            human.recordThought(thought);
-            System.out.println("계획목록 = " + thought.getContent());
+            human.validateStress(human.getStress());
+            human.recordThought(thought.getThink());
         }
 
         for (Action action : actions) {
             human.validateEnergy(human.getEnergy());
-            human.validateStress(human.getStress());
-            human.executeAction(action);
-            System.out.println("계획 목록 " + action.getType() + "중에서 " + action.getContent() + "을 실천하였습니다.");
-            human.removeAction(action);
+            human.executeAction(action.getType(), action.getContent());
         }
 
-        if(human.completeAllActions(actions)) {
+        human.completeMission();
+
+        if(human.isCompleteAllActions()) {
             System.out.println("오늘 계획 완벽하게 실천하였습니다.");
             System.out.println("피로도 = " + human.getEnergy());
             System.out.println("만족도 = " + human.getSatisfaction());

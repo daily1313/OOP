@@ -1,14 +1,25 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class Thought {
 
-    private String content;
+    public String think;
 
-    public Thought(final String content) {
-        this.content = content;
+    public Thought(final String think) {
+        this.think = think;
     }
 
-    public String getContent() {
-        return content;
+    public void recordThinking(final String think) {
+        this.think = think;
     }
+
+    public String getThink() {
+        return think;
+    }
+
+    public void processThought() {
+        System.out.println("오늘 계획 " + this.think + "를 세웠습니다. ");
+    }
+
 
 }
