@@ -17,4 +17,24 @@ public class Mushroom {
     public void eatenMushroomBack(int amount) {
         this.quantityBack -= amount;
     }
+
+    public static void IsEnoughMushroomFront(int quantityFront, int eatingQuantity) {
+        if(quantityFront < eatingQuantity) {
+            throw new IllegalArgumentException("다 먹어서 떨어졌습니다.");
+        }
+    }
+
+    public static void IsEnoughMushroomBack(int quantityBack, int eatingQuantity) {
+        if(quantityBack < eatingQuantity) {
+            throw new IllegalArgumentException("다 먹어서 떨어졌습니다.");
+        }
+    }
+
+    public int getQuantityFront() {
+        return quantityFront;
+    }
+
+    public int getQuantityBack() {
+        return quantityBack;
+    }
 }

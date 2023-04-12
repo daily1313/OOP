@@ -9,9 +9,4 @@ public enum Location {
     Location(String nowLocation) {
         this.nowLocation = nowLocation;
     }
-
-    public String getNowLocation() {
-        return nowLocation;
-    }
-
 }
