@@ -22,7 +22,6 @@ public class Alice implements Human{
         this.height -= amount;
         beverage.drunkenBeverage(amount);
         System.out.println("엘리스가 음료수(" + amount + ")를 마시고 키가 작아졌습니다.");
-        System.out.println("엘리스의 현재 키 " + this.height);
     }
 
     @Override
@@ -32,7 +31,6 @@ public class Alice implements Human{
         this.height += amount;
         cake.eatenCake(amount);
         System.out.println("엘리스가 케이크(" + amount + ")를 먹고 키가 커졌습니다.");
-        System.out.println("엘리스의 현재 키 " + this.height);
     }
 
     @Override
@@ -47,7 +45,6 @@ public class Alice implements Human{
         this.height -= amount;
         mushroom.eatenMushroomFront(amount);
         System.out.println("엘리스가 mushroom 앞쪽(" + amount + ")을 먹고 키가 작아졌습니다.");
-        System.out.println("엘리스의 현재 키 :" + this.height);
     }
 
     @Override
@@ -57,7 +54,6 @@ public class Alice implements Human{
         this.height += amount;
         mushroom.eatenMushroomBack(amount);
         System.out.println("엘리스가 mushroom 뒷쪽(" + amount + ")을 먹고 키가 커졌습니다.");
-        System.out.println("엘리스의 현재 키 " + this.height);
     }
 
     public void move(Door door) {
