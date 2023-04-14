@@ -13,6 +13,9 @@ public class Cake {
     }
 
     public static void IsEnoughCake(int amount, int eatingQuantity) {
+        if(eatingQuantity < 0) {
+            throw new IllegalArgumentException("먹는 양은 음수가 될 수 없습니다.");
+        }
         if(amount < eatingQuantity) {
             throw new IllegalArgumentException("먹을 양이 부족합니다.");
         }

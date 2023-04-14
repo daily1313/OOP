@@ -19,12 +19,18 @@ public class Mushroom {
     }
 
     public static void IsEnoughMushroomFront(int quantityFront, int eatingQuantity) {
+        if(eatingQuantity < 0) {
+            throw new IllegalArgumentException("먹는 양은 음수가 될 수 없습니다.");
+        }
         if(quantityFront < eatingQuantity) {
             throw new IllegalArgumentException("다 먹어서 떨어졌습니다.");
         }
     }
 
     public static void IsEnoughMushroomBack(int quantityBack, int eatingQuantity) {
+        if(eatingQuantity < 0) {
+            throw new IllegalArgumentException("먹는 양은 음수가 될 수 없습니다.");
+        }
         if(quantityBack < eatingQuantity) {
             throw new IllegalArgumentException("다 먹어서 떨어졌습니다.");
         }
