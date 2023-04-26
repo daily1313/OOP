@@ -56,8 +56,5 @@ public class Game {
             Animal rabbit = Rabbit.getInstance();
             rabbit.act();
         }
-
     }
-
-
 }
