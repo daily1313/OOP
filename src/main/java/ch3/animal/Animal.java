@@ -15,6 +15,4 @@ public abstract class Animal {
     public void eat() {
         System.out.println(name +"이 당근을 먹었습니다.");
     }
-
-
 }

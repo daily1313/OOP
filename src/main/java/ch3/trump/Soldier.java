@@ -25,28 +25,15 @@ public class Soldier extends Trump {
 
     @Override
     public void act() {
-        printMakeAMarchMessage();
-        while (nowDistance <= END_POINT) {
-            move();
-            getNowDistance();
+        makeMarch();
+    }
+
+    private void makeMarch() {
+        while(nowDistance < END_POINT) {
+            nowDistance += 10;
+            System.out.println(this.name + "은 행진하고 있습니다");
+            System.out.println("남은 거리 : " + (END_POINT - nowDistance));
         }
-        printSuccessMission();
-    }
-
-    private void move() {
-        this.nowDistance += 10;
-    }
-
-    private void getNowDistance() {
-        System.out.println("병사의 현재 거리 : " + nowDistance);
-    }
-
-    private void printMakeAMarchMessage() {
-        System.out.println("행진을 시작합니다.");
-    }
-
-    private void printSuccessMission() {
-        System.out.println("도착지점에 도달하였습니다.");
     }
 
     @Override

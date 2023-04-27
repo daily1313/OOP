@@ -10,49 +10,85 @@ import ch3.trump.Shape;
 import ch3.trump.Soldier;
 import ch3.trump.Trump;
 import ch3.trump.TrumpHuman;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Game {
 
+    private static final int GARDENER_OPTION_NUMBER = 1;
+    private static final int KING_OPTION_NUMBER = 2;
+    private static final int QUEEN_OPTION_NUMBER = 3;
+    private static final int SERVANT_OPTION_NUMBER = 4;
+    private static final int SOLDIER_OPTION_NUMBER = 5;
+    private static final int TRUMP_HUMAN_OPTION_NUMBER = 6;
+    private static final int RABBIT_OPTION_NUMBER = 7;
+
     public static void main(String[] args) {
-        System.out.println("게임을 시작합니다.");
-        System.out.println("원하는 캐릭터를 선정해주세요.(1:정원사, 2:왕, 3:여왕, 4:신하, 5:병사, 6:트럼프인간, 7:토끼)");
         int optionNumber = chooseCharacterOptionNumber();
         playGame(optionNumber);
     }
 
     private static int chooseCharacterOptionNumber() {
         Scanner scanner = new Scanner(System.in);
-        int inputCharacter = scanner.nextInt();
-        return inputCharacter;
+        System.out.println("원하는 캐릭터를 선택해주세요.(1:정원사, 2:왕, 3:여왕, 4:신하, 5:병사, 6:트럼프인간, 7:토끼)");
+        int inputCharacterOptionNumber = scanner.nextInt();
+        return inputCharacterOptionNumber;
     }
 
     private static void playGame(int characterOptionNumber) {
-        if(characterOptionNumber == 1) {
+        checkOptionNumberAboutGardener(characterOptionNumber);
+        checkOptionNumberAboutKing(characterOptionNumber);
+        checkOptionNumberAboutQueen(characterOptionNumber);
+        checkOptionNumberAboutServant(characterOptionNumber);
+        checkOptionNumberAboutSoldier(characterOptionNumber);
+        checkOptionNumberAboutTrumpHuman(characterOptionNumber);
+        checkOptionNumberAboutRabbit(characterOptionNumber);
+    }
+
+    private static void checkOptionNumberAboutGardener(int characterOptionNumber) {
+        if(characterOptionNumber == GARDENER_OPTION_NUMBER) {
             Trump gardener = Gardener.getInstance();
             gardener.act();
         }
-        if(characterOptionNumber == 2) {
+    }
+
+    private static void checkOptionNumberAboutKing(int characterOptionNumber) {
+        if(characterOptionNumber == KING_OPTION_NUMBER) {
             Trump king = King.getInstance();
             king.act();
         }
-        if(characterOptionNumber == 3) {
+    }
+
+    private static void checkOptionNumberAboutQueen(int characterOptionNumber) {
+        if(characterOptionNumber == QUEEN_OPTION_NUMBER) {
             Trump queen = Queen.getInstance();
             queen.act();
         }
-        if(characterOptionNumber == 4) {
+    }
+
+    private static void checkOptionNumberAboutServant(int characterOptionNumber) {
+        if(characterOptionNumber == SERVANT_OPTION_NUMBER) {
             Trump servant = Servant.getInstance();
             servant.act();
         }
-        if(characterOptionNumber == 5) {
+    }
+
+    private static void checkOptionNumberAboutSoldier(int characterOptionNumber) {
+        if(characterOptionNumber == SOLDIER_OPTION_NUMBER) {
             Trump soldier = Soldier.getInstance();
             soldier.act();
         }
-        if(characterOptionNumber == 6) {
+    }
+
+    private static void checkOptionNumberAboutTrumpHuman(int characterOptionNumber) {
+        if(characterOptionNumber == TRUMP_HUMAN_OPTION_NUMBER) {
             Trump trumpHuman = TrumpHuman.getInstance();
             trumpHuman.act();
         }
-        if(characterOptionNumber == 7) {
+    }
+
+    private static void checkOptionNumberAboutRabbit(int characterOptionNumber) {
+        if(characterOptionNumber == RABBIT_OPTION_NUMBER) {
             Animal rabbit = Rabbit.getInstance();
             rabbit.act();
         }

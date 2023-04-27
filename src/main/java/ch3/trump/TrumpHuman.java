@@ -15,16 +15,10 @@ public class TrumpHuman extends Trump {
         return trumpHuman;
     }
 
-    public void hitTheDeck() {
-        trumpHuman.hitTheDeck();
-    }
-
-    public void flipOver() {
-        trumpHuman.flipOver();
-    }
-
     @Override
     public void act() {
+        trumpHuman.hitTheDeck();
+        trumpHuman.flipOver();
         walk();
         flutterFromSideToSide();
     }
@@ -37,7 +31,6 @@ public class TrumpHuman extends Trump {
         if(canWalk()) {
             System.out.println(trumpHuman.name + "이 걸었습니다.");
         }
-        throw new IllegalStateException(trumpHuman.name + "은 걸을 수 없습니다.");
     }
 
     @Override
