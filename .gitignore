@@ -4,7 +4,7 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-ch3
+!**/src/main/java/ch3
 
 ### IntelliJ IDEA ###
 .idea/modules.xml
