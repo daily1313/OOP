@@ -6,11 +6,9 @@ import ch3.trump.Gardener;
 import ch3.trump.King;
 import ch3.trump.Queen;
 import ch3.trump.Servant;
-import ch3.trump.Shape;
 import ch3.trump.Soldier;
 import ch3.trump.Trump;
 import ch3.trump.TrumpHuman;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Game {
