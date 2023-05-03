@@ -17,7 +17,6 @@ public class Barista {
     }
 
     public List<Coffee> serveCoffeeToCashier() {
-
         return coffees;
     }
 
